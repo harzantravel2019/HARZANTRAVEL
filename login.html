@@ -1,0 +1,80 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HARZAN TRAVEL | Secure Login</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body data-page="login" class="auth-page">
+  <main class="auth-shell">
+    <section class="auth-hero">
+      <div class="auth-brand">
+        <a class="logo-card auth-logo-card" href="login.html">
+          <img src="assets/img/harzan-logo.jpg" alt="HARZAN TRAVEL logo">
+          <span class="logo-subtitle">Accounting Portal</span>
+        </a>
+
+        <div class="topbar-actions auth-topbar-actions"></div>
+      </div>
+
+      <div class="auth-story">
+        <span class="eyebrow" data-auth-access>Protected workspace</span>
+        <h1 data-auth-title>Secure access for HARZAN TRAVEL accounting</h1>
+        <p class="lead" data-auth-lead>Sign in with email and password or continue with Google to open the accounting workspace.</p>
+
+        <div class="auth-note-grid">
+          <article class="panel auth-note-card">
+            <span class="eyebrow">Supabase Auth</span>
+            <h3>Single access point</h3>
+            <p data-auth-note>All accounting pages now require an authenticated Supabase session.</p>
+          </article>
+
+          <article class="panel auth-note-card">
+            <span class="eyebrow">First account</span>
+            <h3>Create or sign in</h3>
+            <p data-auth-account-note>Create the first account here or sign in with an existing one.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel auth-panel">
+      <div class="panel-head auth-panel-head">
+        <div>
+          <span class="eyebrow">Access</span>
+          <h3>Sign in</h3>
+        </div>
+      </div>
+
+      <form id="auth-form" class="form-grid auth-form">
+        <label for="auth-email" class="field-span-2">
+          <span class="field-label">Email</span>
+          <input type="email" id="auth-email" autocomplete="email" required>
+        </label>
+
+        <label for="auth-password" class="field-span-2">
+          <span class="field-label">Password</span>
+          <input type="password" id="auth-password" autocomplete="current-password" required>
+        </label>
+
+        <div class="form-actions field-span-2 auth-actions">
+          <button class="primary-button" type="submit" id="auth-submit">Sign In</button>
+          <button class="ghost-button" type="button" id="auth-register">Create Account</button>
+        </div>
+
+        <button class="ghost-button auth-google-button field-span-2" type="button" id="auth-google">Continue with Google</button>
+        <span class="inline-status auth-status field-span-2" id="auth-status" aria-live="polite"></span>
+      </form>
+
+      <p class="table-note auth-google-setup" data-auth-google-setup>Google sign-in requires the Google provider and redirect URLs to be enabled in Supabase Auth.</p>
+    </section>
+  </main>
+
+  <script src="assets/js/supabase-config.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="assets/js/i18n.js"></script>
+  <script src="assets/js/common.js"></script>
+  <script src="assets/js/auth.js"></script>
+</body>
+</html>
